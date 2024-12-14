@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fashionista - Define Your Style</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background: linear-gradient(to right, #ff7e5f, #feb47b);
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: bold;
+      text-transform: uppercase;
+      transition: color 0.3s ease;
+    }
+
+    .navbar a:hover {
+    color: #b7a58f;
+  }
+    .home-section {
+      background: url('runway.jpg') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+
+    .home-section::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background:white;
+    }
+
+    .fashion-show {
+      position: relative;
+      z-index: 1;
+      padding: 20px 40px;
+      border-radius: 10px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .fashion-show h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+      color:#333;
+    }
+
+    .highlight {
+      color: #feb47b;
+    }
+
+    .fashion-show p {
+      font-size: 20px;
+      margin-bottom: 30px;
+      color:#333;
+    }
+
+    .runway {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .model {
+      width: 100px;
+      height: 200px;
+      background: linear-gradient(135deg, #ff7e5f, #feb47b);
+      border-radius: 10px;
+      animation: walk 3s infinite alternate;
+    }
+
+    @keyframes walk {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-10px);
+      }
+    }
+    .footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+    }
+
+    .footer p {
+      margin-bottom: 10px;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .social-icon {
+      color: white;
+      text-decoration: none;
+      font-size: 15px;
+      transition: color 0.3s ease;
+    }
+
+    .social-icon:hover {
+      color: #feb47b;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">Fashionista</div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="home.html" id="home-link">Home</a></li>
+        <li><a href="collect.html">Collections</a></li>
+        <li><a href="collect.html">About Me</a></li>
+        <li><a href="collect.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="home-section">
+    <div class="fashion-show">
+      <h1>Welcome to <span class="highlight"> My Fashionista Collections</span></h1>
+      <p>Discover my fantastic fashions and timeless elegance that make me unique.</p>
+      <div class="runway">
+        <div class="model"></div>
+        <div class="model"></div>
+        <div class="model"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2024 Fashionista. All Rights Reserved.</p>
+    <div class="social-icons">
+      <a href="#" class="social-icon" aria-label="Facebook">@facebook account</a>
+      <a href="#" class="social-icon" aria-label="Twitter">@X account</a>
+      <a href="#" class="social-icon" aria-label="Instagram">@Instagram account</a>
+    </div>
+  </footer>
+</body>
+</html>
